@@ -1,0 +1,98 @@
+{
+	"info": {
+		"name": "Impl Cache - Coleção",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Buscar conteúdo (GET /conteudos/{id})",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/conteudos/1",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["conteudos", "1"]
+				}
+			}
+		},
+		{
+			"name": "Criar conteúdo (POST /conteudos)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{ "key": "Content-Type", "value": "application/json" }
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"titulo\": \"Meu título\",\n  \"corpo\": \"Corpo do conteúdo\",\n  \"autor\": \"Autor X\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/conteudos",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["conteudos"]
+				}
+			}
+		},
+		{
+			"name": "Atualizar conteúdo (PUT /conteudos/{id})",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{ "key": "Content-Type", "value": "application/json" }
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"titulo\": \"Título atualizado\",\n  \"corpo\": \"Novo corpo\",\n  \"autor\": \"Autor Y\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/conteudos/1",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["conteudos", "1"]
+				}
+			}
+		},
+		{
+			"name": "Excluir conteúdo (DELETE /conteudos/{id})",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/conteudos/1",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["conteudos", "1"]
+				}
+			}
+		},
+		{
+			"name": "Estatísticas do cache (GET /cache/estatisticas)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cache/estatisticas",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["cache", "estatisticas"]
+				}
+			}
+		},
+		{
+			"name": "Limpar cache (DELETE /cache)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cache",
+					"host": ["localhost"],
+					"port": "8080",
+					"path": ["cache"]
+				}
+			}
+		}
+	]
+}
